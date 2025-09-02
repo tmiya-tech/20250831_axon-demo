@@ -7,7 +7,7 @@ public sealed interface TaskEvent {
 
   record TaskUpdatedEvent(String taskId, String name) implements TaskEvent {}
 
-  record TaskCompletedEvent(String taskId) implements TaskEvent {}
+  record TaskCompletedEvent(String taskId, String autoDeletionDeadlineId) implements TaskEvent {}
 
   record TaskDeletedEvent(String taskId) implements TaskEvent {}
 
